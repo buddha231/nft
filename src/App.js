@@ -32,7 +32,7 @@ function App() {
       console.log('Error uploading file: ', error)
     }
   }
-  const handleGenerate = () => {
+  const handleGenerate = async () => {
     const obj =
     {
       dna: "614131007",
@@ -55,8 +55,9 @@ function App() {
     const json = JSON.stringify(obj)
     const blob = new Blob([json], { type: 'application/json' })
     const href = URL.createObjectURL(blob)
-    const added = client.add(href)
     try {
+      const added = await client.add(json)
+
       console.log(`https://ipfs.infura.io/ipfs/${added.path}`)
       const url = `https://ipfs.infura.io/ipfs/${added.path}`
       updateFileUrl(url)
@@ -65,13 +66,13 @@ function App() {
     }
 
 
-    // const link = document.createElement('a')
-    // link.href = href
-    // link.download = fileName + '.json'
-    // link.click()
+    //const link = document.createElement('a')
+    //link.href = href
+    //link.download = fileName + '.json'
+    //link.click()
 
-    // document.body.removeChild(link)
-    // URL.revokeObjectURL(href)
+    //// document.body.removeChild(link)
+    //// URL.revokeObjectURL(href)
 
   }
   return (
