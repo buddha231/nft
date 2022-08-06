@@ -1,0 +1,17 @@
+{
+  "dna": "614131007",
+  "name": "Hottie book",
+  "description": "hot guy rolling his eyes",
+  "image": "ipfs://Qmc7JBgtVtS7uAJMov4WcLSa59Xv31CFEeyVaMGiMsLyKu",
+  "pdf": "ipfs://QmPVtqCbhb9ZXkiZY5GXP9D6f7fmj8CtyayZB7PSvHCdWR",
+  "attributes": [
+    {
+      "trait_type": "cover photo hotness",
+      "value": "epic"
+    },
+    {
+      "trait_type": "Book rating",
+      "value": "5"
+    }
+  ]
+}
